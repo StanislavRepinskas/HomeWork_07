@@ -65,7 +65,7 @@ class PieChartView @JvmOverloads constructor(
 
         this.sectorItems = chartItems
 
-        invalidate()
+        requestLayout()
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -156,7 +156,7 @@ class PieChartView @JvmOverloads constructor(
         return (distanceX * distanceX) + (distanceY * distanceY) <= radius * radius
     }
 
-    override fun onSaveInstanceState(): Parcelable? {
+    override fun onSaveInstanceState(): Parcelable {
         val superState = super.onSaveInstanceState()
 
         return PieChartSaveState(

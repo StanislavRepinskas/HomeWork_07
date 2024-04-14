@@ -85,7 +85,6 @@ class DetailChartView @JvmOverloads constructor(
         }
 
         requestLayout()
-        invalidate()
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
